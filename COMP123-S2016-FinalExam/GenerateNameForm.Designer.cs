@@ -33,7 +33,7 @@
             this.LastNameLabel2 = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.FirstNameLabel2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.firstnametextBox = new System.Windows.Forms.TextBox();
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.NameListGroupBox.Controls.Add(this.LastNameLabel2);
             this.NameListGroupBox.Controls.Add(this.LastNameTextBox);
             this.NameListGroupBox.Controls.Add(this.FirstNameLabel2);
-            this.NameListGroupBox.Controls.Add(this.textBox1);
+            this.NameListGroupBox.Controls.Add(this.firstnametextBox);
             this.NameListGroupBox.Controls.Add(this.LastNameLabel);
             this.NameListGroupBox.Controls.Add(this.listBox1);
             this.NameListGroupBox.Controls.Add(this.FirstNameLabel);
@@ -70,6 +70,7 @@
             this.GenerateButton.TabIndex = 8;
             this.GenerateButton.Text = "Generate Names";
             this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // LastNameLabel2
             // 
@@ -96,12 +97,12 @@
             this.FirstNameLabel2.TabIndex = 5;
             this.FirstNameLabel2.Text = "First Name";
             // 
-            // textBox1
+            // firstnametextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 198);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 26);
-            this.textBox1.TabIndex = 4;
+            this.firstnametextBox.Location = new System.Drawing.Point(7, 198);
+            this.firstnametextBox.Name = "firstnametextBox";
+            this.firstnametextBox.Size = new System.Drawing.Size(152, 26);
+            this.firstnametextBox.TabIndex = 4;
             // 
             // LastNameLabel
             // 
@@ -172,6 +173,7 @@
             this.listBox1.Size = new System.Drawing.Size(152, 94);
             this.listBox1.Sorted = true;
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // FirstNameLabel
             // 
@@ -242,6 +244,7 @@
             this.FirstNameListBox.Size = new System.Drawing.Size(152, 94);
             this.FirstNameListBox.Sorted = true;
             this.FirstNameListBox.TabIndex = 0;
+            this.FirstNameListBox.SelectedIndexChanged += new System.EventHandler(this.FirstNameListBox_SelectedIndexChanged);
             // 
             // NextButton
             // 
@@ -252,6 +255,7 @@
             this.NextButton.TabIndex = 7;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // GenerateNameForm
             // 
@@ -283,7 +287,7 @@
         private System.Windows.Forms.Label LastNameLabel2;
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.Label FirstNameLabel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox firstnametextBox;
         protected System.Windows.Forms.Button NextButton;
         protected System.Windows.Forms.Button GenerateButton;
     }
