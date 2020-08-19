@@ -8,6 +8,11 @@ namespace COMP123_M2020_FinalExam
 {
     public static class Program
     {
+        public static GenerateNameForm genform;
+        public static splashform splash;
+        public static AbilityGeneratorForm ability;
+        public static RaceAndClassForm race;
+        public static FinalForm final;
         public static Character character = new Character();
 
         /// <summary>
@@ -19,7 +24,12 @@ namespace COMP123_M2020_FinalExam
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AbilityGeneratorForm());
+            splash = new splashform();
+            genform = new GenerateNameForm();
+            ability = new AbilityGeneratorForm();
+            race = new RaceAndClassForm();
+            final = new FinalForm();
+            Application.Run(new splashform());
         }
     }
 }

@@ -20,5 +20,9 @@ namespace COMP123_M2020_FinalExam
         public string Charisma { get; set; }
 
         public string Race { get; set; }
+
+        public string Firstname { get; set; }
+
+        public string Lastname { get; set; }
     }
 }
